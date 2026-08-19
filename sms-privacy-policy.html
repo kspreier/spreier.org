@@ -1,0 +1,238 @@
+<title>Gateway Alerts SMS Policy</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  /* Light palette — complete token set on bare :root. */
+  :root {
+    --ground:   #FBFBFC;
+    --surface:  #F2F3F6;
+    --ink:      #16191F;
+    --muted:    #5C6472;
+    --rule:     #DFE2E9;
+    --accent:   #2C5F8A;
+    --chip-bg:  #E8EDF3;
+    --chip-ink: #24415C;
+
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  /* System-dark, unless the viewer explicitly chose light. */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:   #14161A;
+      --surface:  #1C1F25;
+      --ink:      #E6E8EC;
+      --muted:    #98A0AD;
+      --rule:     #2A2E36;
+      --accent:   #6FA8D6;
+      --chip-bg:  #232B34;
+      --chip-ink: #A9CBE6;
+    }
+  }
+
+  /* Explicit dark choice wins in the other direction. */
+  :root[data-theme="dark"] {
+    --ground:   #14161A;
+    --surface:  #1C1F25;
+    --ink:      #E6E8EC;
+    --muted:    #98A0AD;
+    --rule:     #2A2E36;
+    --accent:   #6FA8D6;
+    --chip-bg:  #232B34;
+    --chip-ink: #A9CBE6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 4rem 1.5rem 6rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .doc {
+    max-width: 41rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 4.2vw, 2.3rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .meta {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1rem 1.15rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.75;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    overflow-x: auto;
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  section { display: flex; flex-direction: column; gap: 0.9rem; }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.16rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    text-wrap: balance;
+  }
+  /* The number is referential, not decorative: the text cross-references "section 7". */
+  h2 .n {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    flex: none;
+  }
+
+  p { margin: 0; }
+  p + p { margin-top: 0.15rem; }
+
+  strong { font-weight: 650; color: var(--ink); }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.83em;
+    background: var(--chip-bg);
+    color: var(--chip-ink);
+    padding: 0.12em 0.42em;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .note {
+    color: var(--muted);
+    font-size: 0.94rem;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.25rem;
+    color: var(--muted);
+    font-size: 0.86rem;
+  }
+</style>
+
+<div class="doc">
+
+  <header style="display:flex; flex-direction:column; gap:1.25rem;">
+    <h1>SMS Privacy Policy</h1>
+    <div class="meta">
+      <div><b>Effective date</b> &nbsp;17 August 2026</div>
+      <div><b>Applies to</b> &nbsp;SMS notifications sent from the phone number ending 0785</div>
+      <div><b>Operated by</b> &nbsp;Kevin Spreier</div>
+    </div>
+  </header>
+
+  <section>
+    <h2><span class="n">01</span> What this is</h2>
+    <p>Automated technical alerts sent by private infrastructure-monitoring software to a small, fixed
+    set of authorized recipients — the operator, and anyone the operator has designated to receive
+    them. There is no public sign-up, no customer list, no purchased or rented data, and no marketing
+    of any kind.</p>
+    <p>Messages are event-driven: one is sent when a monitored system fails, and when it recovers. A
+    healthy system sends nothing at all.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span> What we collect</h2>
+    <p>Recipients' mobile telephone numbers, held in configuration on the operator's own servers.
+    Alert content — a short technical description of a failure plus a timestamp — which describes
+    computer systems, not people. Delivery metadata (message identifier, status, carrier, error code),
+    held by our delivery provider.</p>
+    <p>Nothing else: no names, addresses, payment details, location, contacts, or device data.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span> Consent</h2>
+    <p>A number is added only after that person has given the operator express permission, in writing,
+    for example by email. We never add a number from a contact list, a directory, or a referral, and
+    never obtain consent on anyone else's behalf.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span> How recipients are added and removed</h2>
+    <p><strong>There is no subscription system</strong> — no sign-up page, no web form, no join
+    keyword, no subscriber database. Email the operator (section 7) to be added or removed; only the
+    operator can change the configuration.</p>
+    <p>Separately, replying <code>STOP</code> (or <code>CANCEL</code>, <code>QUIT</code>,
+    <code>OPTOUT</code>, <code>UNSUBSCRIBE</code>, <code>STOPALL</code>, <code>REVOKE</code>,
+    <code>END</code>) makes our delivery provider stop messages to your number immediately;
+    <code>HELP</code> or <code>INFO</code> returns assistance, and <code>START</code> resubscribes.
+    This is applied by the carrier layer to every recipient, is required by US messaging rules, and
+    cannot be disabled by us. If you use a keyword, please also email the operator so the number is
+    removed at source.</p>
+    <p class="note"><strong>Message and data rates may apply.</strong> Delivery depends on your
+    carrier and handset and cannot be guaranteed.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span> How we use it, and who we share it with</h2>
+    <p>Solely to notify authorized recipients that monitored infrastructure has failed or recovered.
+    Never for marketing, advertising, profiling, or analytics.</p>
+    <p>Shared only with our SMS delivery provider (Twilio) and the mobile carriers it transits, as far
+    as is necessary to deliver a message. We do not sell, rent, license, or otherwise disclose
+    recipients' numbers or message content to anyone else.</p>
+    <!-- DO NOT PARAPHRASE. Submission 2026-08-17 was rejected 30908 while carrying "Mobile opt-in
+         data is never shared with third parties for marketing purposes" -- same meaning, still
+         refused. Vetting matches near-verbatim wording; that version omitted "affiliates",
+         "promotional" and "mobile information or messaging consent". -->
+    <p><strong>No mobile information or messaging consent will be shared with third parties or
+    affiliates for marketing or promotional purposes.</strong></p>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span> Retention and security</h2>
+    <p>Numbers are held only in server configuration and are deleted on request. Alert logs are
+    retained on the operator's servers for at least 90 days; delivery metadata is retained by the
+    delivery provider under its own schedule. Credentials and recipient configuration are held in
+    machine-scope environment variables, never in files, source code, or command-line arguments.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">07</span> Contact</h2>
+    <p>Questions, corrections, or requests to be added or removed:
+    <a href="mailto:kevin@spreier.com">kevin@spreier.com</a></p>
+  </section>
+
+  <footer>Material changes to this policy will be reflected in the effective date above.</footer>
+
+</div>

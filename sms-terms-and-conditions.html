@@ -1,0 +1,208 @@
+<title>Gateway Alerts SMS Terms</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  :root {
+    --ground:   #FBFBFC;
+    --surface:  #F2F3F6;
+    --ink:      #16191F;
+    --muted:    #5C6472;
+    --rule:     #DFE2E9;
+    --accent:   #2C5F8A;
+    --chip-bg:  #E8EDF3;
+    --chip-ink: #24415C;
+
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:   #14161A;
+      --surface:  #1C1F25;
+      --ink:      #E6E8EC;
+      --muted:    #98A0AD;
+      --rule:     #2A2E36;
+      --accent:   #6FA8D6;
+      --chip-bg:  #232B34;
+      --chip-ink: #A9CBE6;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:   #14161A;
+    --surface:  #1C1F25;
+    --ink:      #E6E8EC;
+    --muted:    #98A0AD;
+    --rule:     #2A2E36;
+    --accent:   #6FA8D6;
+    --chip-bg:  #232B34;
+    --chip-ink: #A9CBE6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 4rem 1.5rem 6rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .doc { max-width: 41rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2.75rem; }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 4.2vw, 2.3rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .meta {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1rem 1.15rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.75;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    overflow-x: auto;
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  section { display: flex; flex-direction: column; gap: 0.9rem; }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.16rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--rule);
+    text-wrap: balance;
+  }
+
+  p { margin: 0; }
+  p + p { margin-top: 0.15rem; }
+  strong { font-weight: 700; color: var(--ink); }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.83em;
+    background: var(--chip-bg);
+    color: var(--chip-ink);
+    padding: 0.12em 0.42em;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .note { color: var(--muted); font-size: 0.94rem; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.25rem;
+    color: var(--muted);
+    font-size: 0.86rem;
+  }
+</style>
+
+<div class="doc">
+
+  <header style="display:flex; flex-direction:column; gap:1.25rem;">
+    <h1>SMS Terms and Conditions</h1>
+    <div class="meta">
+      <div><b>Program name</b> &nbsp;AnchorPoint Gateway Alerts</div>
+      <div><b>Effective date</b> &nbsp;17 August 2026</div>
+      <div><b>Operated by</b> &nbsp;Kevin Spreier</div>
+      <div><b>Sender</b> &nbsp;the phone number ending 0785</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Program description</h2>
+    <p><strong>AnchorPoint Gateway Alerts</strong> is a private operational alerting program. It sends
+    automated technical notifications from privately operated infrastructure-monitoring software to a
+    small, fixed set of authorized recipients — the operator, and anyone the operator has designated
+    to receive them.</p>
+    <p>A message is sent when a monitored system fails, and when it recovers. Typical content is a
+    short technical description — a process that is not running, a database that is unreachable, data
+    that has gone stale — with a timestamp.</p>
+    <p>This program sends no marketing, promotional, or advertising content of any kind, and it is not
+    open to the public: there is no sign-up page, web form, or join keyword.</p>
+  </section>
+
+  <section>
+    <h2>Message frequency</h2>
+    <p>Messages are <strong>event-driven, not scheduled</strong>. Frequency varies with the health of
+    the monitored systems: a message is sent only when a system fails or recovers, so a healthy period
+    produces no messages at all, and most days there are none.</p>
+  </section>
+
+  <section>
+    <h2>Cost</h2>
+    <p><strong>Message and data rates may apply.</strong> Any charges are those of your own mobile
+    carrier under your plan; the program itself is free to recipients.</p>
+  </section>
+
+  <section>
+    <h2>How to get help</h2>
+    <p>Reply <strong>HELP</strong> to any message from this program for assistance, or contact the
+    operator directly at <a href="mailto:kevin@spreier.com">kevin@spreier.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>How to opt out</h2>
+    <p>Reply <strong>STOP</strong> to any message from this program to stop all further messages to
+    your number. The keywords <code>CANCEL</code>, <code>QUIT</code>, <code>OPTOUT</code>,
+    <code>UNSUBSCRIBE</code>, <code>STOPALL</code>, <code>REVOKE</code> and <code>END</code> have the
+    same effect, and <code>START</code> resubscribes. These are processed automatically by our
+    delivery provider.</p>
+    <p>You may also email the operator at
+    <a href="mailto:kevin@spreier.com">kevin@spreier.com</a> to be removed. Because recipients are
+    managed by the operator rather than by a subscription system, please email as well as replying if
+    you want your number removed at source rather than only blocked in transit.</p>
+  </section>
+
+  <section>
+    <h2>Delivery</h2>
+    <p class="note">Delivery depends on your mobile carrier and handset and cannot be guaranteed.
+    Carriers are not liable for delayed or undelivered messages. A handset set to Do Not Disturb may
+    silence a message with no indication to the sender.</p>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <p>What is collected, how it is used, and confirmation that it is never shared with third parties
+    or for marketing purposes are set out in the program's privacy policy, provided alongside these
+    terms.</p>
+  </section>
+
+  <section>
+    <h2>Support contact</h2>
+    <p>Questions, corrections, or requests to be added or removed:
+    <a href="mailto:kevin@spreier.com">kevin@spreier.com</a></p>
+  </section>
+
+  <footer>Material changes to these terms will be reflected in the effective date above.</footer>
+
+</div>

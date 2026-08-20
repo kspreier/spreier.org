@@ -109,21 +109,53 @@
 
        "Please add my number 555-555-0123 to the gateway alerts."
 
-2. The operator puts that number into the system's configuration by hand.
+2. The operator replies with the confirmation shown below, which states
+   what will be sent, how often, that rates may apply, and how to stop.
+   Those disclosures are in the body of the reply itself, not only
+   behind a link.
+
+3. The operator puts that number into the system's configuration by hand.
    It is held in a machine-scope environment variable on the server, never
    in a file, in source code, or on a web form.
 
-3. The change takes effect on the next deployment. Only then can any
+4. The change takes effect on the next deployment. Only then can any
    message be sent to that number.</div>
     <p>There is no sign-up page, no web form, no join keyword, no QR code, and no paper form.
     Nothing is automated at any step: a human reads the request and a human edits the configuration.</p>
+    <p><strong>The confirmation sent at step 2, in full.</strong> It is sent before the number is
+    added, so no message can reach anyone who has not been told the terms first:</p>
+    <div class="script">Subject: Gateway ALERT - your number has been added
+
+You asked to receive Gateway ALERT messages at (***) ***-1234.
+
+What you will receive: automated technical alerts about the operator's
+trading-data infrastructure, sent only when a monitored system fails
+or recovers.
+
+Message frequency: varies. Nothing is sent while systems are healthy;
+during an incident, up to 12 messages per hour until it is resolved.
+
+Message and data rates may apply.
+
+Reply STOP to unsubscribe. Reply HELP for help.
+
+Privacy policy: https://sms.spreier.org/sms-privacy-policy.html
+Terms and conditions: https://sms.spreier.org/sms-terms-and-conditions.html</div>
   </section>
 
   <section>
-    <h2><span class="n">03</span> How consent is recorded</h2>
-    <p>The person's own request email is the record, retained by the operator with its date and the
-    number they supplied. Because the recipient writes it themselves and states their own number,
-    the request <em>is</em> the consent &mdash; there is no separate agreement to capture.</p>
+    <h2><span class="n">03</span> How consent is recorded, and where the proof is</h2>
+    <p><strong>The proof of opt-in is the recipient's own request email, and it remains on file.</strong>
+    Each request is retained by the operator exactly as received &mdash; its date, the address it was
+    sent from, and the mobile number the sender supplied &mdash; together with the confirmation reply
+    sent back at step 2. Because the recipient writes the request themselves and states their own
+    number in it, the request <em>is</em> the consent: there is no separate agreement to capture and
+    no checkbox to record.</p>
+    <p>There is no public sign-up page to screenshot, because there is no public sign-up. The stored
+    request emails are the record, and they are <strong>available to a carrier or reviewer on request
+    at <a href="mailto:sms@spreier.org">sms@spreier.org</a></strong>. They are not published here:
+    they carry a third party's email address and mobile number, and posting those on a public page to
+    prove consent would be its own privacy failure.</p>
     <p>Consent is per person and specific to this program. It is never shared, transferred, or
     reused for any other purpose or sender.</p>
   </section>
@@ -145,7 +177,8 @@
     <p>Automated technical alerts about the operator's own trading-data infrastructure, sent only
     when a monitored system fails or recovers. <strong>Message frequency varies and is not
     fixed:</strong> nothing is sent while systems are healthy, and during an incident alerts repeat
-    about every five minutes until it is resolved. Most weeks there are no messages at all.
+    about every five minutes until it is resolved &mdash; up to 12 messages per hour. Most weeks
+    there are no messages at all.
     <strong>Message and data rates may apply.</strong></p>
   </section>
 
